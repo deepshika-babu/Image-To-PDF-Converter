@@ -1,18 +1,19 @@
-# Image to PDF & PDF to Image Converter
+# Image to PDF - PDF to Image Converter & PDF Merger
 
-This project provides Python scripts for converting images to PDFs and extracting images from PDFs. It includes multiple methods using different libraries to achieve high-quality conversions.
+This project provides Python scripts for converting images to PDFs, extracting images from PDFs and merging PDFs. It includes multiple methods using different libraries to achieve high-quality conversions.
 
 ## Features
 - Convert images (`.png`, `.jpg`, etc.) to a PDF.
 - Extract images from a PDF and save them as separate image files.
-- Different implementations using **PIL (Pillow)**, **img2pdf**, and **PyMuPDF (Fitz)**.
+- Merge two or more PDFs.
+- Different implementations using **PIL (Pillow)**, **img2pdf**, **PyMuPDF (Fitz)** and **PyPDF2**.
 - Supports high-quality output and maintains page order.
 
 
 ## Requirements
 Install the required Python packages:
 ```bash
-pip install pillow img2pdf pymupdf
+pip install pillow img2pdf pymupdf PyPDF2
 ```
 
 ## Usage
@@ -50,6 +51,13 @@ Run the following command:
 python pdf_to_img.py
 ```
 - Output: Saves extracted images in the `pdf_images` folder.
+
+### 📌 Merge PDFs
+Run the following command:
+```bash
+python mergePdf.py
+```
+- Output: Combines/merges PDFs present in the current directory.
 
 ## Troubleshooting
 - Ensure the images are named properly (e.g., `page_1.png`, `page_2.png`, etc.) to maintain order.
